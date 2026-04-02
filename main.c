@@ -56,8 +56,53 @@ void konversiJarak(){
     printf ("Tugas Daus\n");
 }
 void konversiBerat(){
-   // Tugas untuk Anggota yang memegang fungsi ini//
-   printf ("Tugas Aneas\n");
+   int pilihan;
+    float nilai, hasil;
+
+    printf("=== KALKULATOR KONVERSI BERAT ===\n");
+    printf("Pilih jenis konversi:\n");
+    printf("1. Gram ke Kilogram\n");
+    printf("2. Kilogram ke Gram\n");
+    printf("3. Gram ke Miligram\n");
+    printf("4. Miligram ke Gram\n");
+    printf("5. Kilogram ke Ton\n");
+    printf("6. Ton ke Kilogram\n");
+    printf("Masukkan pilihan (1-6): ");
+    scanf("%d", &pilihan);
+
+    printf("Masukkan nilai: ");
+    scanf("%f", &nilai);
+
+    switch(pilihan) {
+        case 1:
+            hasil = nilai / 1000;
+            printf("Hasil: %.2f kg\n", hasil);
+            break;
+        case 2:
+            hasil = nilai * 1000;
+            printf("Hasil: %.2f g\n", hasil);
+            break;
+        case 3:
+            hasil = nilai * 1000;
+            printf("Hasil: %.2f mg\n", hasil);
+            break;
+        case 4:
+            hasil = nilai / 1000;
+            printf("Hasil: %.2f g\n", hasil);
+            break;
+        case 5:
+            hasil = nilai / 1000;
+            printf("Hasil: %.2f ton\n", hasil);
+            break;
+        case 6:
+            hasil = nilai * 1000;
+            printf("Hasil: %.2f kg\n", hasil);
+            break;
+        default:
+            printf("Pilihan tidak valid!\n");
+    }
+
+    return 0;
 }
 void konversiWaktu(){
     //Tugas untuk Anggota yang memegang fungsi ini//
