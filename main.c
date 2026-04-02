@@ -52,8 +52,42 @@ void konversiSuhu(){
     printf("Tugas Dzejjy\n");
 }
 void konversiJarak(){
-    //Tugas untuk Anggota yang memegang fungsi ini//
-    printf ("Tugas Daus\n");
+    int pilihan;
+    float nilai, hasil;
+
+    printf("=== KALKULATOR KONVERSI JARAK ===\n");
+    printf("Pilih jenis konversi:\n");
+    printf("1. Meter ke Kilometer\n");
+    printf("2. Kilometer ke Meter\n");
+    printf("3. Meter ke Mil\n");
+    printf("4. Mil ke Meter\n");
+    printf("Masukkan pilihan (1-4): ");
+    scanf("%d", &pilihan);
+
+    printf("Masukkan nilai: ");
+    scanf("%f", &nilai);
+
+    switch(pilihan) {
+        case 1:
+            hasil = nilai / 1000;
+            printf("Hasil: %.2f km\n", hasil);
+            break;
+        case 2:
+            hasil = nilai * 1000;
+            printf("Hasil: %.2f m\n", hasil);
+            break;
+        case 3:
+            hasil = nilai / 1609.34;
+            printf("Hasil: %.2f mi\n", hasil);
+            break;
+        case 4:
+            hasil = nilai * 1609.34;
+            printf("Hasil: %.2f m\n", hasil);
+            break;
+        default:
+            printf("Pilihan tidak valid!\n");
+    }
+    return 0;
 }
 void konversiBerat(){
    int pilihan;
