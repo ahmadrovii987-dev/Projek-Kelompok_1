@@ -159,6 +159,56 @@ void konversiBerat(){
     return 0;
 }
 void konversiWaktu(){
-    //Tugas untuk Anggota yang memegang fungsi ini//
-    printf ("Tugas Airis\n");
+    int pilihan;
+    float nilai, hasil;
+    
+    printf("\n=== KALKULATOR KONVERSI WAKTU ===\n");
+    printf("1. Jam ke Menit\n");
+    printf("2. Menit ke Jam\n");
+    printf("3. Menit ke Detik\n");
+    printf("4. Detik ke Menit\n");
+    printf("5. Jam ke Detik\n");
+    printf("6. Detik ke Jam\n");
+    printf("Masukkan pilihan (1-6): ");
+
+    if (scanf(" %d", &pilihan) != 1) { 
+        printf("Input harus berupa angka!\n");
+        while(getchar() != '\n'); 
+        return; 
+    }
+
+    printf("Masukkan nilai waktu: ");
+    scanf(" %f", &nilai);
+
+    switch(pilihan) {
+        case 1:
+            hasil = nilai * 60;
+            printf("Hasil: %.2f Menit\n", hasil);
+            break;
+        case 2:
+            hasil = nilai / 60;
+            printf("Hasil: %.2f Jam\n", hasil);
+            break;
+        case 3:
+            hasil = nilai * 60;
+            printf("Hasil: %.2f Detik\n", hasil);
+            break;
+        case 4:
+            hasil = nilai / 60;
+            printf("Hasil: %.2f Menit\n", hasil);
+            break;
+        case 5:
+            hasil = nilai * 3600;
+            printf("Hasil: %.2f Detik\n", hasil);
+            break;
+        case 6:
+            hasil = nilai / 3600;
+            printf("Hasil: %.2f Jam\n", hasil);
+            break;
+        default:
+            printf("Pilihan tidak valid!\n");
+            break; 
+    }
+    return 0;
 }
+
