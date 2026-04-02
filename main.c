@@ -21,7 +21,7 @@ int main (){
         printf ("2. Konversi Jarak\n");
         printf ("3. Konversi Berat\n");
         printf ("4. Konversi Waktu\n");
-        printf ("Keluar Program\n");
+        printf ("5. Keluar Program\n");
 
         printf ("Pilih Menu (1-5)\n");
         scanf ("%d", &pilihan);
@@ -107,7 +107,7 @@ void konversiJarak(){
         default:
             printf("Pilihan tidak valid!\n");
     }
-    return 0;
+    return ;
 }
 void konversiBerat(){
    int pilihan;
@@ -156,7 +156,7 @@ void konversiBerat(){
             printf("Pilihan tidak valid!\n");
     }
 
-    return 0;
+    return ;
 }
 void konversiWaktu(){
     int pilihan;
@@ -209,6 +209,6 @@ void konversiWaktu(){
             printf("Pilihan tidak valid!\n");
             break; 
     }
-    return 0;
+    return ;
 }
 
