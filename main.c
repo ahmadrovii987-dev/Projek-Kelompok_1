@@ -48,9 +48,29 @@ int main (){
 
 //Implementasi Fungsi oleh Anggota//
 void konversiSuhu(){
-    //Tugas untuk Anggota yang memegang fungsi ini//
-    printf("Tugas Dzejjy\n");
+    float c, f, k;
+
+    printf("\n--- Konversi Suhu (dari celcius) ---\n"); 
+    printf("Masukkan suhu dalam Celsius: ");
+    
+    // Mengambil input dari user
+    if (scanf("%f", &c) != 1) {
+        printf("Input harus berupa angka!\n");
+        while(getchar() != '\n'); // Membersihkan buffer input
+        return;
+    }
+
+    // Perhitungan menggunakan rumus standar
+    f = (c * 9 / 5) + 32;
+    k = c + 273.15;
+
+    // Menampilkan hasil
+    printf("\nHasil Konversi dari %.2f Celsius:\n", c);
+    printf("===================================\n");
+    printf("Fahrenheit : %.2f F\n", f);
+    printf("Kelvin     : %.2f K\n", k);
 }
+
 void konversiJarak(){
     int pilihan;
     float nilai, hasil;
